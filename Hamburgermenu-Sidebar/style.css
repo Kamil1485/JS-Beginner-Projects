@@ -1,0 +1,61 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+  
+}
+.hamburger{
+
+ 
+
+    padding: 4px;
+    height: 12rem;
+    width:14rem;
+  
+}
+.features{
+    display: flex;
+    width: 152px;
+    width: 222px;
+ 
+}
+.button{
+display: none;
+width: 44px;
+height: 44px;
+}
+@media screen and ( max-width: 750px) {
+    .button{
+       display: block;
+       position: absolute;
+       left: 90%;
+      
+
+    }
+    .container{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+       
+       
+        
+       
+       }
+      .hamburger{
+        display: none;
+        left: 10%;
+      }
+   
+       .features{
+        display: flex;
+        flex-direction: column;
+        
+        
+       }
+    
+}
+.active{
+display: block;
+
+}

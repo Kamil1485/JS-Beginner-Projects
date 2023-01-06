@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.degistir {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 60px;
+    border-radius: 50px;
+    transition: .2s;
+ 
+    border: 2px solid rgb(96, 96, 34);
+}
+
+.degistir i {
+    width: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1;
+
+}
+
+.degistir .ball {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin: 7.5px;
+    border-radius: 50%;
+    transition: .3s ease-out;
+ 
+}
+
+input {
+    display: none;
+}
+
+/*
+    -- Light Mode --
+*/
+
+.light {
+    background: #fafafa;
+}
+
+.light .degistir {
+    background: linear-gradient(145deg, #e1e1e1, #fff);
+    box-shadow: 3px 3px 4px #e6e6e6,
+                -3px -3px 4px #ffffff;
+}
+
+.light .degistir .bxs-sun {
+    color: #0cbba3;
+}
+
+.light .degistir .bx-moon {
+    color: #052d6a;
+}
+
+.light .degistir .ball {
+    background-color: cornsilk;
+  
+  
+}
+
+/*
+    -- Dark Mode --
+*/
+
+.dark {
+    background: #151d2a;
+}
+
+.dark .degistir {
+    background: #151d2a;
+    box-shadow: 3px 3px 3px #0e131b,
+                -3px -3px 3px #1c2739;
+}
+
+.dark .degistir .bx-sun {
+    color: #fafafa;
+}
+
+.dark .degistir .bxs-moon {
+    color: #151d2a;
+}
+
+.dark .degistir .ball {
+    background: #754d4d;
+    transform: translateX(60px);
+}

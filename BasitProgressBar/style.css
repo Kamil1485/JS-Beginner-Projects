@@ -1,0 +1,48 @@
+
+.ilerleme{
+    width: 100%;
+    height: 44px;
+    background-color: cornflowerblue;
+    border: 4px solid yellowgreen;
+    color: white;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 44px;
+
+}
+.bar{
+    width: 0px;/**BURASI BASLANGICTA BAR 0 GENİSLİKLE BASLAMASI İCİN*/
+  height: 44px;
+  background-color: ghostwhite;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(115, 0, 255);
+  display: none; /*başlangıcta görüntüleme olmasın bar */
+  border-radius: 44px;
+  animation: renkdegistir 50s ease-in; /* 100s de ayarladık tüm dolmayı herbir bar 1s de doluyuor yani bize 100s lazım*/
+
+}
+
+.active{
+    display: block;
+}
+@keyframes renkdegistir {
+    /* burada 25e kadar renk turunculasamya baslıyacak 25 te tam tomato renk olacak olacak*/
+    25%{
+        background-color:rgb(122, 76, 68) ;
+        
+    }
+    50%{
+        background-color:blue ;
+    }
+    75%{
+        background-color:yellow ;
+    }
+    100%{
+        background-color:green;
+    
+        
+    }
+    
+    
+}

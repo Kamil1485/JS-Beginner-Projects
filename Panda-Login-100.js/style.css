@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: yellow;
+}
+.container{
+    height: 31.25em;
+    width: 31.25em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+form{
+    width: 23.75em;
+  height: 18.75em;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% + 3.1em);
+  left: 50%;
+  padding: 0 3.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5em;
+}
+form label {
+    display: block;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  color: #2e0d30;
+  }
+  form input{
+    font-size: 0.95em;
+  font-weight: 400;
+  color: #3f3554;
+  padding: 0.3em;
+  border: none;
+  border-bottom: 0.12em solid #3f3554;
+  outline: none;
+  }
+
+
+
+  form button{
+  font-size: 0.95em;
+  padding: 0.8em 0;
+  border-radius: 2em;
+  border: none;
+  outline: none;
+  background-color: #f4c531;
+  color: #2e0d30;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-top: 0.8em;
+  }
+  form input:focus {
+    border-color:red
+  }
+  form input:not(:last-child) {
+  margin-bottom: 0.9em;
+}
+.panda-yüzü{
+
+    height: 7.5em;
+    width: 8.4em;
+    background-color: #ffffff;
+    border: 0.18em solid #2e0d30;
+    border-radius: 7.5em 7.5em 5.62em 5.62em;
+    position: absolute;
+    top: 2em;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.solkulak,
+.sagkulak{
+    background-color: #3f3554;
+    height: 2.5em;
+    width: 2.81em;
+    border: 0.18em solid #2e0d30;
+    border-radius: 2.5em 2.5em 0 0;
+    top: 1.75em;
+    position: absolute;
+}
+.solkulak {
+    transform: rotate(-38deg);
+    left: 10.75em;
+  /* margin:44px*/
+
+  }
+  .sagkulak {
+    transform: rotate(38deg);
+  right: 10.75em;
+  }
+  .kızarıksol,
+  .kızarıksag{
+    background-color: #ff8bb1;
+  height: 1em;
+  width: 1.37em;
+  border-radius: 50%;
+  position: absolute;
+  top: 4em;
+  }
+  .kızarıksol{
+    transform: rotate(25deg);
+    left: 1em;
+  }
+  .kızarıksag{
+ transform: rotate(-25deg);
+ right: 1em;
+
+  }
+.solgöz,
+.saggöz{
+    background-color: #3f3554;
+    height: 2.18em;
+    width: 2em;
+    border-radius: 2em;
+    position: absolute;
+    top: 2.18em;
+  /*  position: absolute; silersen üst üste gelmez sol sag ilk basta*/
+
+  }
+
+  .solgöz{
+    left: 1.37em;
+    transform: rotate(-20deg);
+  }
+  .saggöz{
+    right: 1.37em;
+    transform: rotate(20deg);
+  }
+  .solgözici,
+  .saggözici {
+    height: 0.6em;
+  width: 0.6em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.6em;
+  top: 0.6em;
+  transition: 1s all;
+  }
+  .solgözici {
+    background-color: #ff8bb1;
+    transform: rotate(20deg);
+  }
+  .saggözici {
+    background-color: #ff8bb1;
+    transform: rotate(-20deg);
+  }
+  .burun{
+    height: 1em;
+    width: 1em;
+    background-color: #3f3554;
+    position: absolute;
+    top: 4.37em;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 1.2em 0 0 0.25em;
+    transform: rotate(45deg);
+  }
+  .burun:before {
+    content: "";
+    position: absolute;
+    background-color: #3f3554;
+    height: 0.6em;
+    width: 0.1em;
+    transform: rotate(-45deg);/* & cene cizgisi */
+    top: 0.75em;
+    left: 1em;
+  }
+  .agız,
+  .agız:before {
+    height: 0.75em;
+    width: 0.93em;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0.18em #3f3554;
+  }
+  .agız {
+    top: 5.31em;
+    left: 3.12em;
+  }
+  .agız:before {
+    content: "";
+    position: absolute;
+    left: 0.87em;
+  }
+  .solel,
+  .sagel{
+background-color: #3f3554;
+height: 2.6em;
+width: 2.25em;
+border: 0.18em solid #2e0d30;
+border-radius: 0.6em 0.6em 2.18em 2.18em;
+transition: 1s all;
+position: absolute;
+top: 8.4em;
+  }
+  .solel{
+    left: 7.5em;
+    
+
+  }
+  .sagel{
+    right: 7.5em;
+  }
+  .solpati,
+  .sagpati{
+    background-color: #3f3554;
+    height: 3em;
+    width: 3em;
+    border: 0.18em solid #2e0d30;
+    border-radius: 2.5em 2.5em 1.2em 1.2em;
+    position: absolute;
+    top: 26.56em;
+  }
+  .solpati{
+    left: 6em;
+    margin-top:-8px;
+    
+  }
+  .sagpati{
+    right:6em;
+    margin-top:-8px;
+    
+  }
+
+  .solpati:before,
+.sagpati:before {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  height: 1.37em;
+  width: 1.75em;
+  top: 1.12em;
+  left: 0.55em;
+  border-radius: 1.56em 1.56em 0.6em 0.6em;
+}
+  
+.solpati:after,
+.sagpati:after {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  top: 0.31em;
+  left: 1.12em;
+  box-shadow: 0.87em 0.37em #ffffff, -0.87em 0.37em #ffffff;
+}
+@media screen and (max-width: 500px) {
+    .container {
+      font-size: 14px;
+    }
+  }

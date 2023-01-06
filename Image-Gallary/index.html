@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="ürünler">
+        <div class="imageler">
+        <img src="./laram.png" alt="" onclick="Büyült(this)">
+        <img src="./laram3.png" alt="" onclick="Büyült(this)">
+        <img src="./daysgone.jpg" alt="" onclick="Büyült(this)">
+        <img src="./ıntersaller.jpg" alt="" onclick="Büyült(this)">
+    </div>
+    <div class="imageler-container">
+        <img src="./laram.png"  alt="" id="imagebox">
+    </div>
+</div>
+<script>
+function Büyült(kücükresimgönder) { 
+    var fullresim=document.getElementById ("imagebox")
+    fullresim.src=kücükresimgönder.src;
+ }
+
+</script>
+
+</body>
+</html>

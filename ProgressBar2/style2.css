@@ -1,0 +1,99 @@
+
+body{
+    background-color: cornsilk;
+}
+.ilerleme-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.ilerleme-button::after{
+    background-color: rebeccapurple;
+width: 99px;
+height: 444px;
+font-size: large;
+content: "Selam";
+border-radius: 6px;
+}
+/*
+.ilerleme-button::before{
+    content: "yükleme başlangıcı";
+  }
+  */
+
+.indirme-button{
+    position: relative;
+    width: 125px;
+    background-color: aqua;
+    border: 4px solid;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.indirme-button::after{
+    content: ''; /* burası dolma barı yani soldan 100 e kadar dolacak yükleme icerisi */
+
+    position: absolute;
+    left: 0;/*&bu kısım download ın after yani sagında olacaktı left 0 yapark sola aldık*/
+    top: 0;
+    bottom: 0;
+    width: var(--progress); /*& ONEMLİ JS DEN GELEN PROGRESS BU  BURASI bu kısım sayesinde bar doluyor*/
+   background-color: greenyellow;/*!dolma rengi */
+    background-size: 50px 50px;
+    border-radius: 25px;
+    transition: all .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+     
+}
+.button-text {
+    display: inline-block;
+    opacity: 1;
+    color: red;
+    transition: all .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.yükleme-text,
+.yüzde {
+    display: block;
+    color: #70C542;
+    font-size: 32px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+  
+}
+.in-ilerleme .yükleme-text {
+    opacity: 1;
+    top: -95%; /*! LOADİNG YAZISINI GİZLEMİSTİK Z İNDEX VE OPACİTY İLE ONU YUKARI TAŞIMA İŞLEMİ İLERLEME BAŞLAYINCA*/
+ 
+}
+
+.in-ilerleme .yüzde{
+   opacity: 1;
+  font-size: 15px;
+   left: 50%;
+   top: 50%;
+   z-index: 1;
+}
+.in-ilerleme .button-text {
+    opacity: 0;
+    transform: translateY(-25px); /*Download yazısı yukarı kayacak ve yok olacak*/
+}
+
+.in-ilerleme .indirme-button {
+    width: 400px;
+}
+
+.finished .indirme-button {
+    font-size: 15px;
+}
+
+.finished .indirme-button:after {
+    opacity: 0;
+}

@@ -1,0 +1,149 @@
+body{
+    background-color: rgb(80, 170, 180);
+}
+ul{
+    margin: 5%;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border:5px solid red;
+    padding: 25px 0;
+    border-radius: 25px ;
+    background-color: rgb(27, 11, 60);
+box-shadow: 0 4px 8px 0;
+
+}
+li{
+    margin: auto;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    border: 15px saddlebrown;
+
+   
+  
+}
+li:after{
+
+    content: " ";
+    display: block;
+  
+   
+
+}
+li:hover:after{
+
+    border-bottom: 2px  solid bisque;
+  
+    transform: scaleX(1);
+    animation:  kapa 1s ease-in both;
+    
+ 
+  
+}
+@keyframes kapa {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+    
+}
+
+a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  .bir::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+.bir:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  background-color: rgb(27, 209, 109);
+}
+
+  .iki::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+   left: 0px;
+  bottom: 0px; /* YAZININ ALTINA GECİREN BU BEFORE YUKARIDA OLUYOR NORMALDE*/
+    transform-origin: left;
+    transform: scaleX(0.3);
+    transition: transform .3s ease-in-out;
+  }
+  
+.iki:hover::before {
+    transform-origin: right;
+    transform: scaleX(1);
+    background-color: rgb(127, 72, 72);
+  }
+
+
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  .üç::before {/* ORTADAN SOL SAGA ALT CİZGİ CIKARMA ORGİNİ CENTER İLE YAPIYORUM !!!!*/ 
+    /*before veya after olması onemli degil ikiside yapıyor*/ 
+    transform-origin: center;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #1a82ba;
+    bottom: 0;
+    left: 0;
+    
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+.üç:hover::before {
+    transform-origin: center;
+    transform: scaleX(1);
+    background-color: rgb(127, 72, 72);
+  }
+  
+  
+
+  .dort::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(36, 36, 10);
+   left: 0px;
+  bottom: 0px; /* YAZININ ALTINA GECİREN BU BEFORE YUKARIDA OLUYOR NORMALDE*/
+    transform-origin: left;
+    transform: scaleY(0.1);
+    transition: transform .3s ease-in-out;
+  }
+  
+.dort:hover::before {
+    transform-origin: right;
+    transform: scaleY(1.4);
+    background-color: rgb(127, 72, 72);
+  }
+

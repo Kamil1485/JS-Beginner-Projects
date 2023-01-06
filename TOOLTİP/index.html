@@ -1,0 +1,84 @@
+<!doctype>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TOOLTİP  UYGULAMA</title>
+<style>
+#ornek{
+position: absolute;
+left:100px;
+top:100px;
+background: red;
+color:white;
+}
+ 
+#ornek2{
+position: absolute;
+left:400px;
+top:400px;
+background: red;
+color:white;
+}
+</style>
+</head>
+ 
+<body>
+<p>Not:tooltip kullanmak için tooltip yapılacak nesneye <b>data-tooltip="gösterilecek açıklama" </b>şeklinde tanımlama yapılabilirsiniz</p>
+ 
+<div><p id="ornek" data-tooltip="Merhaba bu tooltip uyarısıdır">Fareyi Getir</p></p>
+<div><p id="ornek2" data-tooltip="Bu da ikinci tooltip">Fareyi Getir</p></p>
+ 
+ 
+<!-- script kodlarını </body> etitekinden hemen önce yazmayı unutmayın --> 
+<script>
+ 
+(function () {
+// © 2016 https://www.yazilimbilisim.net
+ 
+// tooltip için div oluşturma
+var toolTip = document.createElement("div");
+ 
+// stil düzenlemesi
+toolTip.style.visibility="hidden"; 
+toolTip.style.position="fixed";
+toolTip.style.top="250px";
+toolTip.style.left="1ex";
+toolTip.style.borderRadius="5px";
+toolTip.style.backgroundColor="#8d8daa";
+ 
+// oluşturupan nesneyi DOM içine ekleme
+document.body.appendChild(toolTip);
+ 
+function tooltipGoster (olay) {
+/*üzerine geldiğimiz nesnenin konumunu tespit etme*/
+var kutu = olay.target.getBoundingClientRect();
+var coordX = kutu.left;
+var coordY = kutu.top;
+ 
+// kordinatlarını düzenleme //İSTEGE BAĞLI NEREDE GORUNMESİNİ İSTİYORSAN
+toolTip.style.left= (coordX + 40).toString() + "px";
+toolTip.style.top= (coordY + 40).toString() + "px";
+ 
+// ekranda gösterilecek nesne ve css ataması
+toolTip.innerHTML = "<span style='font-size:16px;color:red;padding:5px;'>" + this.dataset.tooltip + "</span>";
+ 
+// tooltip nesnesini ekranda gösterme
+toolTip.style.visibility="visible";
+}
+ 
+function tooltipGizle(olay) {
+toolTip.style.visibility="hidden";
+}
+ 
+//bütün tooltip nesnelerini yakalayıp hepsine olay atama işlemi yapılıyor
+var uyarilar=document.querySelectorAll('[data-tooltip]');
+for (var i = 0; i < uyarilar.length; i++) {
+uyarilar[i].addEventListener("mouseover", tooltipGoster , false);
+uyarilar[i].addEventListener("mouseout", tooltipGizle , false);
+}
+ 
+})();
+ 
+</script> 
+</body>
+</html>

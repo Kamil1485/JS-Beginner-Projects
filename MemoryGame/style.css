@@ -1,0 +1,142 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins",sans-serif;
+}
+
+body{
+    background-color: orange;
+}
+
+.wrapper{
+    background-color: yellow;
+ 
+    width: 42rem;
+   box-sizing: content-box;
+   padding: 2.5em 3em;
+    background-color: white;
+    position: absolute;/* oyunu durdur altında kalıyor absolute ypaınca aynı yerdeyse bu uste gecer */
+    transform: translate(-50%,-50%);
+    left: 50%; /* transformla bu left top ortaladı wrappırı*/
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+   
+
+
+}
+
+.oyun-container{
+    position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.6em;
+
+
+
+}
+
+
+.durum-container{
+    text-align: right;
+    margin-bottom: 1em;
+margin-top: 11px;
+}
+.durum-container span{
+   font-weight: 750;
+}
+
+/** RESİM & KISMI BURDA*/
+.card-container{/* BURADAN AYARLA RESİM */
+    position: relative;
+    width: 10.25em;
+    height: 8.25em;
+    cursor: pointer;
+    margin-left:-44px;
+
+}
+.card-once,
+.card-sonra{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+      /**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    backface-visibility: hidden;/* BU GİZLİYOR FOTOGRAFLARI ONEMLİ UNUTMA!!!!!!!!!!!!!!!!!!!!!!!//!!*/
+   /**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+      /**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+}
+.card-once{
+    background-color: orange;
+    font-size: 3.1em;
+   
+}
+.image{
+  width: 9.25em;
+  height: 7.25em;
+}
+.card-sonra{
+
+  background-color: rebeccapurple;
+ 
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    /* resim acılıp kapanma */
+
+}
+.card-container.flipped .card-once {
+    transform: rotateY(180deg);
+  }
+
+  .card-container.flipped .card-sonra {
+    transform: rotateY(0deg);
+  }
+  .controls-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+background-color: orange;/* bu kısım body gibi tüm ekrana etki*/
+  }
+button{
+    border:none;
+    cursor: pointer;
+    padding: 1em 1em;
+
+}
+#stop{
+    font-size: 1em;
+    display: block;
+    margin: 1em  auto 0 auto;
+    background-color: black;
+    color: white;
+}
+.controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #sonuc {
+    text-align: center;
+  }
+  #sonuc h2 {
+    font-size: 2.5em;
+  }
+  #sonuc h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }

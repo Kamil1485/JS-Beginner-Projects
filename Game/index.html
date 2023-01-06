@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <button data-modal-target="#modal" > Open Module</button>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">
+                Example Modal </div>
+               
+                <button  data-close-button class="close-button">X</button>
+
+            </div>
+           <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, beatae iure. Aut quisquam, vero soluta ex fuga quam saepe dignissimos optio ipsa laboriosam voluptates non.
+        </div>
+    </div>
+    </div>
+    <div id="overlay"></div>
+    
+</body>
+<script src="script.js"></script>
+</html>
+<!--   <button  data-close-button class="close-button">X</button> bu butona ismiyle ulasmaya calısınca backgroundunu yapamıyorsun ama .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color:black;
+    color: red;
+  } seklinde yapılıyor bak bakalım !!-->
