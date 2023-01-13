@@ -62,13 +62,13 @@ const yerdegistirmeicon=document.querySelector(".drop-list .icon");
 
 yerdegistirmeicon.addEventListener("click",()=>{
     //!SWAP İSLEMİ YAPTIK GECİCİ DEGİSKENİİLE
-    let gecicikod=fromCurrency.value; //!SWAP İŞLEMİ İCİN TEMP(GECİCİ)DEGİSKEN TEMPAD TEMP SOYAD NEYSE ! TUTMA!!!!!!!!!!!!!!!!1
+    let gecicikod=fromCurrency.value; //!SWAP İŞLEMİ İCİN TEMP(GECİCİ)DEGİSKEN TEMPAD TEMP SOYAD NEYSE ! TUTMA!!!!!!!!!!!!!!!!
     fromCurrency.value=toCurrency.value;
     toCurrency.value=gecicikod;
 
 loadFlag(fromCurrency);
 loadFlag(toCurrency)
-getExchangeRate(); //hesapmalayı tekrar yaptırıyoruz swap islemi oldugu icin napacak
+getExchangeRate(); //hesapmalayı tekrar yaptırıyoruz swap islemi oldugu icin 
 //üstte yeni bayrakları güncelleyecek fromcurrency kısmının bayragını ve tocurrency yenileyecek degistirdiler ülke adlarını
 //daha sonra  degismis bayraklarla hesaplama butonuna basmadan hesaplasın diye otomatik hesaplama yoksa butona basıp aynı hesap olurdu.1
 
@@ -76,7 +76,7 @@ getExchangeRate(); //hesapmalayı tekrar yaptırıyoruz swap islemi oldugu icin 
    
 })
 
-function getExchangeRate(){ //! PARA BİRİMİNİN DİGER PARA BİRİMİNDEKİ EDERİ DEGERİ KAÇ ONU HESAPLIYORUZ!!!
+function getExchangeRate(){ //! PARA BİRİMİNİN DİGER PARA BİRİMİNDEKİ DEGERİ KAÇ ONU HESAPLIYORUZ!!!
     const amount = document.querySelector("form input"); //!İNPUT  TAG İNİ ALDIK
     const exchangeRateTxt = document.querySelector("form .exchange-rate");
     let amountVal = amount.value; / İNPUTA GİRİLEN DEGER / 
