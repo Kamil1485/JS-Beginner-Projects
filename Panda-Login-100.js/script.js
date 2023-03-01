@@ -83,7 +83,6 @@ normalElstili();
     `;
     normalGözsitili();
   });
-  //When clicked outside username and password input
   document.addEventListener("click", (e) => {
     let clickedElem = e.target;// eger kullanıcı username icine veya password icine tıklamazsa
     if (clickedElem != usernameRef && clickedElem != passwordRef) {
